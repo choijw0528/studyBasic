@@ -62,16 +62,12 @@ function currentTime() {
 
     if(minuteCheck === 1) {
         hourStick.setAttribute('style', 'transform: rotate(' + ((hour * 30) + (minuteCheck * 6)) + 'deg)');
-        console.log('minuteCheck = 1');
     } else if(minuteCheck === 2) {
         hourStick.setAttribute('style', 'transform: rotate(' + ((hour * 30) + (minuteCheck * 6)) + 'deg)');
-        console.log('minuteCheck = 2');
     } else if(minuteCheck === 3) {
         hourStick.setAttribute('style', 'transform: rotate(' + ((hour * 30) + (minuteCheck * 6))  + 'deg)');
-        console.log('minuteCheck = 3');
     } else if(minuteCheck === 4) {
         hourStick.setAttribute('style', 'transform: rotate(' + ((hour * 30) + (minuteCheck * 6))  + 'deg)');
-        console.log('minuteCheck = 4');
     } else if(minuteCheck === 0) {
         hourStick.setAttribute('style', 'transform: rotate(' + (hour * 30) + 'deg)');
     }
