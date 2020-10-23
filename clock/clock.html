@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="./clock.css">
+</head>
+<body>
+    <div class="wrap">
+        <!-- 현재 시간 영역 -->
+        <h1 id="clock"></h1>
+        <!-- // 현재 시간 영역 -->
+
+        <!-- 디지털 시계 영역 -->
+        <div class="digitalClockArea">
+            <div class="segmentArea hour">
+                <div class="segmentWrap type1">
+                    <span class="segment pos1"></span>
+                    <span class="segment pos2"></span>
+                    <span class="segment pos3"></span>
+                    <span class="segment pos4"></span>
+                    <span class="segment pos5"></span>
+                    <span class="segment pos6"></span>
+                    <span class="segment pos7"></span>
+                </div>
+                <div class="segmentWrap type2">
+                    <span class="segment pos1"></span>
+                    <span class="segment pos2"></span>
+                    <span class="segment pos3"></span>
+                    <span class="segment pos4"></span>
+                    <span class="segment pos5"></span>
+                    <span class="segment pos6"></span>
+                    <span class="segment pos7"></span>
+                </div>
+            </div>
+
+            <div class="segmentArea minute">
+                <div class="segmentWrap type1">
+                    <span class="segment pos1"></span>
+                    <span class="segment pos2"></span>
+                    <span class="segment pos3"></span>
+                    <span class="segment pos4"></span>
+                    <span class="segment pos5"></span>
+                    <span class="segment pos6"></span>
+                    <span class="segment pos7"></span>
+                </div>
+                <div class="segmentWrap type2">
+                    <span class="segment pos1"></span>
+                    <span class="segment pos2"></span>
+                    <span class="segment pos3"></span>
+                    <span class="segment pos4"></span>
+                    <span class="segment pos5"></span>
+                    <span class="segment pos6"></span>
+                    <span class="segment pos7"></span>
+                </div>
+            </div>
+
+            <div class="segmentArea second">
+                <div class="segmentWrap type1">
+                    <span class="segment pos1"></span>
+                    <span class="segment pos2"></span>
+                    <span class="segment pos3"></span>
+                    <span class="segment pos4"></span>
+                    <span class="segment pos5"></span>
+                    <span class="segment pos6"></span>
+                    <span class="segment pos7"></span>
+                </div>
+                <div class="segmentWrap type2">
+                    <span class="segment pos1"></span>
+                    <span class="segment pos2"></span>
+                    <span class="segment pos3"></span>
+                    <span class="segment pos4"></span>
+                    <span class="segment pos5"></span>
+                    <span class="segment pos6"></span>
+                    <span class="segment pos7"></span>
+                </div>
+            </div>
+        </div>
+        <!-- // 디지털 시계 영역 -->
+
+        <!-- 아날로그 시계 영역 -->
+        <div class="analogClockArea">
+            <div class="clockFace">
+                <span class="clockStick hourStick"></span>
+                <span class="clockStick minuteStick"></span>
+                <span class="clockStick secondStick"></span>
+            </div>
+        </div>
+        <!-- // 아날로그 시계 영역 -->
+    </div>
+</body>
+<script src="./clock.js"></script>
+</html>
