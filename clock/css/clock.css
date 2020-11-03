@@ -1,0 +1,346 @@
+@import '/studyBasic/reset.css';
+
+:root {
+    --pc-segment-width: 64px;
+    --pc-segment-height: 12px;
+    --pc-segment-border-radius: calc(var(--pc-segment-height) / 2);
+    --segment-collapse-size: 2px;
+    --pc-segmentWrap-width: calc(var(--pc-segment-width) + 2 * var(--pc-segment-height) - 2 * var(--segment-collapse-size));
+    --pc-segmentWrap-height: calc(2* var(--pc-segment-width) + 3 * var(--pc-segment-height) - 4 * var(--segment-collapse-size));
+
+    --mo-segment-width: 40px;
+    --mo-segment-height: 8px;
+    --mo-segment-border-radius: 4px;
+
+    /* --pc-segment-width: 100px;
+    --pc-segment-height: 20px; */
+}
+
+body {
+    color: #fff;
+    background: #242424;
+}
+
+.wrap {
+    padding: 50px;
+}
+
+/* mobile 대응 (디지털 시계) */
+.wrap.typeMobile {
+    padding: 30px 10px;
+}
+
+.wrap.typeMobile .segmentWrap {
+    /* --pc-segment-width: 40px;
+    --pc-segment-height: 8px;
+    --pc-segmentWrap-width: calc(var(--pc-segment-width) + 2 * var(--pc-segment-height) - 2 * var(--segment-collapse-size));
+    --pc-segmentWrap-height: calc(2* var(--pc-segment-width) + 3 * var(--pc-segment-height) - 4 * var(--segment-collapse-size)); */
+
+    /* width: 54px;
+    height: 100px; */
+}
+
+.wrap.typeMobile .segmentWrap + .segmentWrap {
+    margin-left: 5px;
+}
+
+.wrap.typeMobile .segment {
+    width: 40px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.wrap.typeMobile .segment.pos1 {
+    left: 7px;
+}
+
+.wrap.typeMobile .segment.pos2 {
+    top: 23px;
+    left: -16px;
+}
+
+.wrap.typeMobile .segment.pos3 {
+    top: 23px;
+    right: -16px;
+}
+
+.wrap.typeMobile .segment.pos4 {
+    top: 46px;
+    left: 7px;
+}
+
+.wrap.typeMobile .segment.pos5 {
+    top: 69px;
+    left: -16px;
+}
+
+.wrap.typeMobile .segment.pos6 {
+    top: 69px;
+    right: -16px;
+}
+
+.wrap.typeMobile .segment.pos7 {
+    left: 7px;
+}
+/* // mobile 대응 (디지털 시계) */
+
+.timeWrap .title {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 30px;
+    word-break: keep-all;
+}
+
+.timeWrap + .timeWrap {
+    margin-top: 100px;
+}
+
+/* 디지털 시계 영역 */
+.digitalClockArea {
+    display: flex;
+}
+
+.segmentArea {
+    display: flex;
+}
+
+.segmentArea + .segmentArea {
+    position: relative;
+    margin-left: 40px;
+}
+
+.segmentArea + .segmentArea:before {
+    position: absolute;
+    top: 50%;
+    left: -27px;
+    font-size: 50px;
+    font-weight: bold;
+    transform: translateY(-50%);
+    content: ':';
+}
+
+.segmentWrap {
+    position: relative;
+    /* width: 84px; */
+    /* height: 156px; */
+    width: var(--pc-segmentWrap-width);
+    height: var(--pc-segmentWrap-height);
+    /* width: var(--segmentWrap-width); */
+    /* height: var(--segmentWrap-height); */
+}
+
+.segmentWrap.segment0 .pos1,
+.segmentWrap.segment0 .pos2,
+.segmentWrap.segment0 .pos3,
+.segmentWrap.segment0 .pos5,
+.segmentWrap.segment0 .pos6,
+.segmentWrap.segment0 .pos7 {
+    background-color: #fff;
+}
+
+.segmentWrap.segment1 .pos3,
+.segmentWrap.segment1 .pos6 {
+    background-color: #fff;
+}
+
+.segmentWrap.segment2 .pos1,
+.segmentWrap.segment2 .pos3,
+.segmentWrap.segment2 .pos4,
+.segmentWrap.segment2 .pos5,
+.segmentWrap.segment2 .pos7 {
+    background-color: #fff;
+}
+
+.segmentWrap.segment3 .pos1,
+.segmentWrap.segment3 .pos3,
+.segmentWrap.segment3 .pos4,
+.segmentWrap.segment3 .pos6,
+.segmentWrap.segment3 .pos7 {
+    background-color: #fff;
+}
+
+.segmentWrap.segment4 .pos2,
+.segmentWrap.segment4 .pos3,
+.segmentWrap.segment4 .pos4,
+.segmentWrap.segment4 .pos6 {
+    background-color: #fff;
+}
+
+.segmentWrap.segment5 .pos1,
+.segmentWrap.segment5 .pos2,
+.segmentWrap.segment5 .pos4,
+.segmentWrap.segment5 .pos6,
+.segmentWrap.segment5 .pos7 {
+    background-color: #fff;
+}
+
+.segmentWrap.segment6 .pos1,
+.segmentWrap.segment6 .pos2,
+.segmentWrap.segment6 .pos4,
+.segmentWrap.segment6 .pos5,
+.segmentWrap.segment6 .pos6,
+.segmentWrap.segment6 .pos7 {
+    background-color: #fff;
+}
+
+.segmentWrap.segment7 .pos1,
+.segmentWrap.segment7 .pos2,
+.segmentWrap.segment7 .pos3,
+.segmentWrap.segment7 .pos6 {
+    background-color: #fff;
+}
+
+.segmentWrap.segment8 .pos1,
+.segmentWrap.segment8 .pos2,
+.segmentWrap.segment8 .pos3,
+.segmentWrap.segment8 .pos4,
+.segmentWrap.segment8 .pos5,
+.segmentWrap.segment8 .pos6,
+.segmentWrap.segment8 .pos7 {
+    background-color: #fff;
+}
+
+.segmentWrap.segment9 .pos1,
+.segmentWrap.segment9 .pos2,
+.segmentWrap.segment9 .pos3,
+.segmentWrap.segment9 .pos4,
+.segmentWrap.segment9 .pos6,
+.segmentWrap.segment9 .pos7 {
+    background-color: #fff;
+}
+
+.segmentWrap + .segmentWrap {
+    margin-left: 10px;
+}
+
+.segment {
+    display: inline-block;
+    /* width: 64px; */
+    /* height: 12px; */
+    /* border-radius: 6px; */
+    width: var(--pc-segment-width);
+    height: var(--pc-segment-height);
+    border-radius: var(--pc-segment-border-radius);
+    background-color: rgba(255, 255, 255, 0.03);
+    vertical-align: top;
+}
+
+.segment.pos1 {
+    position: absolute;
+    /* top: 0; */
+    /* left: 10px; */
+    top: 0;
+    left: calc(var(--pc-segment-height) - 2px);
+}
+
+.segment.pos2 {
+    position: absolute;
+    /* top: 36px; */
+    /* left: -26px; */
+    top: calc(var(--pc-segment-height) / 2 - 2px);
+    left: calc(var(--pc-segment-height) / 2);
+    transform: rotate(90deg);
+    transform-origin: left;
+}
+
+.segment.pos3 {
+    position: absolute;
+    /* top: 36px; */
+    /* right: -26px; */
+    /* transform: rotate(90deg); */
+    top: calc(var(--pc-segment-height) / 2 - 2px);
+    right: calc(var(--pc-segment-height) / 2);
+    transform: rotate(-90deg);
+    transform-origin: right;
+}
+
+.segment.pos4 {
+    position: absolute;
+    /* top: 72px; */
+    /* left: 10px; */
+    top: calc(var(--pc-segment-height) + var(--pc-segment-width) - 4px);
+    left: calc(var(--pc-segment-height) - 2px);
+}
+
+.segment.pos5 {
+    position: absolute;
+    /* top: 108px; */
+    /* left: -26px; */
+    top: calc(var(--pc-segment-width) + var(--pc-segment-height));
+    left: calc(var(--pc-segment-height) / 2);
+    transform: rotate(90deg);
+    transform-origin: left;
+}
+
+.segment.pos6 {
+    position: absolute;
+    /* top: 108px; */
+    /* right: -26px; */
+    top: calc(var(--pc-segment-width) + var(--pc-segment-height));
+    right: calc(var(--pc-segment-height) / 2);
+    transform: rotate(-90deg);
+    transform-origin: right;
+}
+
+.segment.pos7 {
+    position: absolute;
+    /* bottom: 0; */
+    /* left: 10px; */
+    bottom: 0;
+    left: calc(var(--pc-segment-height) - 2px);
+}
+/* // 디지털 시계 영역 */
+
+/* 아날로그 시계 영역 */
+.clockFace {
+    position: relative;
+    width: 290px;
+    height: 290px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    background-image: url('../images/clockFace.png');
+    background-size: cover;
+    background-color: #999;
+}
+
+.clockFace:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    content: '';
+}
+
+.clockStick {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    margin-left: -6px;
+    border-radius: 6px;
+    background-color: #000;
+    transform-origin: bottom;
+}
+
+.clockStick.hourStick {
+    height: 50px;
+    margin-top: -50px;
+}
+
+.clockStick.minuteStick {
+    height: 100px;
+    margin-top: -100px;
+}
+
+.clockStick.secondStick {
+    width: 4px;
+    height: 100px;
+    margin: -100px 0 0 -2px;
+    border-radius: 2px;
+    background-color: #f00;
+}
+/* // 아날로그 시계 영역 */
