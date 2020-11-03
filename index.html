@@ -26,15 +26,29 @@
         li + li {
             margin-top: 30px;
         }
+
+        @media all and (max-width: 767px) {
+            .wrap {
+                padding: 30px;
+            }
+
+            .wrap .link {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="wrap">
         <ol>
             <li>
-                <a href="./clock/clock.html" target="_blank" class="link">1. 시계 만들기</a>
+                <a href="./clock/clock.html" class="link">1. 시계 만들기</a>
+            </li>
+            <li>
+                <a href="./bootstrapStudy/bootstrapStudy.html" class="link">2. bootstrapStudy</a>
             </li>
         </ol>
     </div>
+    <!-- <script src="./index.js"></script> -->
 </body>
 </html>
