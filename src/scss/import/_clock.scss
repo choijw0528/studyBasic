@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+// segment setting mixin
+@mixin set-segment($segment-width: 64px, $segment-height: 12px) {
+    $segment-border-radius: $segment-height / 2;
+    $segment-collapse-size: 2px;
+
+    width: $segment-width + 2 * $segment-height - 2 * $segment-collapse-size;
+    height: 2 * $segment-width + 3 * $segment-height - 4 * $segment-collapse-size;
+
+    .segment {
+        width: $segment-width;
+        height: $segment-height;
+        border-radius: $segment-border-radius;
+
+        &.pos1 {
+            top: 0;
+            left: $segment-height - $segment-collapse-size;
+        }
+
+        &.pos2 {
+            top: $segment-height / 2 - $segment-collapse-size;
+            left: $segment-height / 2;
+            transform: rotate(90deg);
+            transform-origin: left;
+        }
+        
+        &.pos3 {
+            top: $segment-height / 2 - $segment-collapse-size;
+            right: $segment-height / 2;
+            transform: rotate(-90deg);
+            transform-origin: right;
+        }
+        
+        &.pos4 {
+            top: $segment-height + $segment-width - 2 * $segment-collapse-size;
+            left: $segment-height - $segment-collapse-size;
+        }
+        
+        &.pos5 {
+            bottom: $segment-height / 2 - $segment-collapse-size;
+            left: $segment-height / 2;
+            transform: rotate(-90deg);
+            transform-origin: left;
+        }
+        
+        &.pos6 {
+            bottom: $segment-height / 2 - $segment-collapse-size;
+            right: $segment-height / 2;
+            transform: rotate(90deg);
+            transform-origin: right;
+        }
+        
+        &.pos7 {
+            bottom: 0;
+            left: $segment-height - $segment-collapse-size;
+        }
+    }
+}
+
+body {
+    color: #fff;
+    background: #242424;
+}
+
+.wrap {
+    padding: 50px;
+}
+
+.timeWrap {
+    .title {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 30px;
+        word-break: keep-all;
+    }
+
+    & + .timeWrap {
+        margin-top: 50px;
+    }
+}
+
+// 디지털 시계 영역
+.digitalClockArea {
+    display: flex;
+}
+
+.segmentArea {
+    display: flex;
+
+    & + .segmentArea {
+        position: relative;
+        margin-left: 40px;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: -27px;
+            font-size: 50px;
+            font-weight: bold;
+            transform: translateY(-50%);
+            content: ':';
+        }
+    }
+}
+
+.segmentWrap {
+    @include set-segment(64px, 12px);
+    
+    position: relative;
+
+    &.segment0 {
+        .pos1,
+        .pos2,
+        .pos3,
+        .pos5,
+        .pos6,
+        .pos7 {
+            background-color: #fff;
+        }
+    }
+
+    &.segment1 {
+        .pos3,
+        .pos6 {
+            background-color: #fff;
+        }
+    }
+
+    &.segment2 {
+        .pos1,
+        .pos3,
+        .pos4,
+        .pos5,
+        .pos7 {
+            background-color: #fff;
+        }
+    }
+
+    &.segment3 {
+        .pos1,
+        .pos3,
+        .pos4,
+        .pos6,
+        .pos7 {
+            background-color: #fff;
+        }
+    }
+
+    &.segment4 {
+        .pos2,
+        .pos3,
+        .pos4,
+        .pos6 {
+            background-color: #fff;
+        }
+    }
+
+    &.segment5 {
+        .pos1,
+        .pos2,
+        .pos4,
+        .pos6,
+        .pos7 {
+            background-color: #fff;
+        }
+    }
+
+    &.segment6 {
+        .pos1,
+        .pos2,
+        .pos4,
+        .pos5,
+        .pos6,
+        .pos7 {
+            background-color: #fff;
+        }
+    }
+
+    &.segment7 {
+        .pos1,
+        .pos2,
+        .pos3,
+        .pos6 {
+            background-color: #fff;
+        }
+    }
+
+    &.segment8 {
+        .pos1,
+        .pos2,
+        .pos3,
+        .pos4,
+        .pos5,
+        .pos6,
+        .pos7 {
+            background-color: #fff;
+        }
+    }
+
+    &.segment9 {
+        .pos1,
+        .pos2,
+        .pos3,
+        .pos4,
+        .pos6,
+        .pos7 {
+            background-color: #fff;
+        }
+    }
+
+    & + .segmentWrap {
+        margin-left: 10px;
+    }
+}
+
+.segment {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+// 디지털 시계 영역
+
+// 아날로그 시계 영역
+.clockFace {
+    position: relative;
+    width: 290px;
+    height: 290px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    background-image: url('../img/images/clock/clockFace.png');
+    background-size: cover;
+    background-color: #999;
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        transform: translate(-50%, -50%);
+        content: '';
+    }
+}
+
+.clockStick {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    margin-left: -6px;
+    border-radius: 6px;
+    background-color: #000;
+    transform-origin: bottom;
+
+    &.hourStick {
+        height: 50px;
+        margin-top: -50px;
+    }
+    
+    &.minuteStick {
+        height: 100px;
+        margin-top: -100px;
+    }
+    
+    &.secondStick {
+        width: 4px;
+        height: 100px;
+        margin: -100px 0 0 -2px;
+        border-radius: 2px;
+        background-color: #f00;
+    }
+}
+// 아날로그 시계 영역
+
+// mobile 대응 (디지털 시계)
+@media all and (max-width: 767px) {
+    .wrap {
+        padding: 30px 10px;
+    }
+
+    .timeWrap {
+        .title {
+            font-size: 22px;
+        }   
+    }
+
+    .segmentArea {
+        & + .segmentArea {
+            margin-left: 24px;
+    
+            &:before {
+                left: -19px;
+            }
+        }
+    } 
+
+    .segmentWrap {
+        @include set-segment(36px, 8px);
+
+        & + .segmentWrap {
+            margin-left: 5px;
+        }
+    }
+}
+
+@media all and (max-width: 374px) {
+    .segmentWrap {
+        @include set-segment(24px, 8px);
+    }
+}
+// mobile 대응 (디지털 시계)
