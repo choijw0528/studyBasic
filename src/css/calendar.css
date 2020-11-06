@@ -1,0 +1,209 @@
+html,
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+table,
+th,
+td,
+button,
+form,
+input,
+select,
+textarea,
+fieldset,
+legend {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	-webkit-text-size-adjust: none;
+}
+
+body {
+	position: relative;
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	word-break: normal;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+address,
+em {
+	font-style: normal;
+}
+
+fieldset,
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+input {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
+dl,
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a[href]:hover, a[href]:active, a[href]:focus {
+	text-decoration: none;
+}
+
+button {
+	-webkit-appearance: none;
+	border: 0;
+	background: none;
+	outline: none;
+	cursor: pointer;
+}
+
+textarea {
+	overflow: auto;
+	resize: none;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+	-webkit-appearance: none !important;
+}
+
+input[type=search]::-ms-clear {
+	display: none;
+}
+
+.blind {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	clip: rect(0, 0, 0, 0);
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #fff;
+	background-color: #1b1c1e;
+}
+
+.wrap {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.dateArea {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+.dateArea .dateText {
+	font-size: 32px;
+}
+
+.btnArea {
+	display: flex;
+	align-items: center;
+}
+
+.btnArea .btn {
+	flex: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background-color: #545556;
+}
+
+.btnArea .btn + .btn {
+	margin-left: 3px;
+}
+
+.calendarArea {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	text-align: right;
+}
+
+.calendarArea .calendarTitleRow {
+	display: flex;
+	align-items: center;
+}
+
+.calendarArea .calendarTitleRow .calendarCell {
+	font-weight: bold;
+}
+
+.calendarArea .calendarDateArea {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.calendarArea .calendarDateArea .calendarCell.holiday, .calendarArea .calendarDateArea .calendarCell.saturday {
+	background-color: #232425;
+}
+
+.calendarArea .calendarRow {
+	display: flex;
+	flex: 1;
+	border-top: 1px solid #383838;
+}
+
+.calendarArea .calendarRow .calendarCell + .calendarCell {
+	border-left: 1px solid #383838;
+}
+
+.calendarArea .calendarCell {
+	flex: 1;
+	padding: 5px;
+}
+
+.calendarArea .calendarCell.holiday {
+	color: #bd3537;
+}
+
+.calendarArea .calendarCell.saturday {
+	color: #64aef1;
+}
+
+@media all and (max-width: 374px) {
+	.dateArea .dateText {
+		font-size: 25px;
+	}
+}
+
+/*# sourceMappingURL=calendar.css.map */

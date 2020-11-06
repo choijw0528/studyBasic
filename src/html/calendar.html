@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calendar</title>
+        <link rel="stylesheet" href="../css/calendar.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="dateArea">
+                <h1 class="dateText">0000년 00월</h1>
+                <div class="btnArea">
+                    <a href="#" class="btn" onClick="setPrevCalendar()">&lt;</a>
+                    <a href="#" class="btn" onClick="setTodayCalendar()">오늘</a>
+                    <a href="#" class="btn" onClick="setNextCalendar()">&gt;</a>
+                </div>
+            </div>
+
+            <div class="calendarArea">
+                <div class="calendarTitleRow">
+                    <span class="calendarCell holiday">일</span>
+                    <span class="calendarCell">월</span>
+                    <span class="calendarCell">화</span>
+                    <span class="calendarCell">수</span>
+                    <span class="calendarCell">목</span>
+                    <span class="calendarCell">금</span>
+                    <span class="calendarCell saturday">토</span>
+                </div>
+
+                <div id="calendar" class="calendarDateArea">
+                    <!-- <div class="calendarRow">
+                        <span class="calendarCell">1일</span>
+                        <span class="calendarCell">2일</span>
+                        <span class="calendarCell">3일</span>
+                        <span class="calendarCell">4일</span>
+                        <span class="calendarCell">5일</span>
+                        <span class="calendarCell">6일</span>
+                        <span class="calendarCell">7일</span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/calendar.js"></script>
+</html>

@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+body {
+    color: #fff;
+    background-color: #1b1c1e;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dateArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    .dateText {
+        font-size: 32px;
+    }
+}
+
+.btnArea {
+    display: flex;
+    align-items: center;
+
+    .btn {
+        flex: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #545556;
+
+        & + .btn {
+            margin-left: 3px;
+        }
+    }
+}
+
+.calendarArea {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: right;
+
+    .calendarTitleRow {
+        display: flex;
+        align-items: center;
+
+        .calendarCell {
+            font-weight: bold;
+        }
+    }
+
+    .calendarDateArea {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        .calendarCell {
+            &.holiday,
+            &.saturday {
+                background-color: #232425;
+            }
+        }
+    }
+    
+    .calendarRow {
+        display: flex;
+        flex: 1;
+        border-top: 1px solid #383838;
+
+        .calendarCell + .calendarCell {
+            border-left: 1px solid #383838;
+        }
+    }
+    
+    .calendarCell {
+        flex: 1;
+        padding: 5px;
+
+        &.holiday {
+            color: #bd3537;
+        }
+
+        &.saturday {
+            color: #64aef1;
+        }
+    }
+}
+
+@media all and (max-width: 374px) {
+    .dateArea {
+        .dateText {
+            font-size: 25px;
+        }
+    }
+}
