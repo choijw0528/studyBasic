@@ -2,17 +2,26 @@ let today = new Date();
 let dateCount = 1; // 날짜값
 let cellCount = 0; // 요일 판단 값
 
-function setPrevCalendar() {
+function setPrevCalendar(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
     today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
     drawCalendar();
 }
 
-function setTodayCalendar() {
+function setTodayCalendar(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
     today = new Date();
     drawCalendar();
 }
 
-function setNextCalendar() {
+function setNextCalendar(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
     today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
     drawCalendar();
 }
