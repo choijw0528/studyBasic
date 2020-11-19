@@ -274,3 +274,11 @@ iframe {
 .box .text {
 	font-size: 18px;
 }
+
+.windowArea {
+	margin-top: 50px;
+}
+
+.windowArea img {
+	margin-left: -26px;
+}
