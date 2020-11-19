@@ -21,7 +21,7 @@ function setTodayCalendar(e) {
 function setNextCalendar(e) {
     e.preventDefault();
     e.stopPropagation();
-    
+
     today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
     drawCalendar();
 }
@@ -32,7 +32,7 @@ function setDate() {
 }
 
 function drawCell(day, number) {
-    return `<span class="calendarCell ${day ? day : ''}">${number ? number + '일' : ''}</span>`;
+    return `<span class="calendarCell ${day ? day : ''}" data-date='${number}'>${number ? number + '일' : ''}</span>`;
 }
 
 function drawFirstWeek(firstDate) {
@@ -151,3 +151,103 @@ function drawCalendar() {
 }
 
 drawCalendar();
+
+
+const cells = document.querySelectorAll('.calendarDateArea .calendarCell');
+const popup = document.querySelector('.popup');
+const popupDate = document.querySelector('.popup .scheduleDate');
+
+const calendar = document.querySelector('#calendar');
+
+let startDate, finishDate;
+
+function drawSchedule(startDate, finishDate) {
+    if(startDate > finishDate) {
+        const temp = startDate;
+        startDate = finishDate;
+        finishDate = temp;
+    
+        console.log('startDate: ' + startDate + ' / finishDate: ' + finishDate);
+    }
+
+    const startIndex = startDate - 1;
+    const finishIndex = finishDate - 1;
+
+    for(let i = startIndex; i <= finishIndex; i++) {
+        const noti = document.createElement('div');
+
+        if(i === startIndex) {
+            noti.setAttribute('class', 'noti startItem');
+        } else if(i === finishIndex) {
+            noti.setAttribute('class', 'noti finishItem');
+        } else {
+            noti.setAttribute('class', 'noti middleItem');
+        }
+
+        if(startIndex === finishIndex) {
+            noti.setAttribute('class', 'noti item');
+        }
+
+        cells[i].appendChild(noti);
+    }
+}
+
+calendar.addEventListener('click', function(e) {
+});
+
+cells.forEach(function(item) {
+    item.addEventListener('mousedown', function(e) {
+        // console.log('Down: ' + e.target.getAttribute('data-date'));
+        startDate = Number(e.target.getAttribute('data-date'));
+    })
+
+    item.addEventListener('mouseup', function(e) {
+        // console.log('Up: ' + e.target.getAttribute('data-date'));
+        finishDate = Number(e.target.getAttribute('data-date'));
+
+        popupOpen();
+        // drawSchedule(startDate, finishDate);
+        
+        
+        let t = '';
+        if(startDate === finishDate) {
+            // console.log(startDate);
+            // console.log(finishDate);
+            // console.log('같은날 선택');
+            t += `${today.getFullYear()}. ${today.getMonth()}. ${startDate}`;    
+        } else {
+            t += `${today.getFullYear()}. ${today.getMonth()}. ${startDate} ~ ${today.getFullYear()}. ${today.getMonth()}. ${finishDate}`;
+        }
+
+        popupDate.innerHTML = t;
+    })
+});
+
+function popupOpen() {
+    popup.setAttribute('aria-hidden', 'false');
+}
+
+function popupClose() {
+    popup.setAttribute('aria-hidden', 'true');
+}
+
+popup.addEventListener('click', function(e) {
+    if(e.target === e.currentTarget) {
+        popupClose();
+    }
+});
+const btnCancel = document.querySelector('.popup .btnCancel');
+const btnConfirm = document.querySelector('.popup .btnConfirm');
+
+btnCancel.addEventListener('click', popupClose);
+btnConfirm.addEventListener('click', popupClose);
+
+// let t = '';
+// t += `${today.getFullYear()}.${today.getMonth()}.${startDate} ~ ${today.getFullYear()}.${today.getMonth()}.${finishDate}`;
+// popupDate.innerHTML = t;
+
+if(startDate === finishDate) {
+    console.log(startDate);
+    console.log(finishDate);
+    console.log('같은날 선택');
+}

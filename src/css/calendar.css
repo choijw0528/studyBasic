@@ -135,19 +135,19 @@ body {
 	font-size: 32px;
 }
 
-.btnArea {
+.btnMonthArea {
 	display: flex;
 	align-items: center;
 }
 
-.btnArea .btn {
+.btnMonthArea .btnMonth {
 	flex: none;
 	padding: 5px 10px;
 	border-radius: 5px;
 	background-color: #545556;
 }
 
-.btnArea .btn + .btn {
+.btnMonthArea .btnMonth + .btnMonth {
 	margin-left: 3px;
 }
 
@@ -190,6 +190,7 @@ body {
 .calendarArea .calendarCell {
 	flex: 1;
 	padding: 5px;
+	user-select: none;
 }
 
 .calendarArea .calendarCell.holiday {
@@ -198,6 +199,99 @@ body {
 
 .calendarArea .calendarCell.saturday {
 	color: #64aef1;
+}
+
+.calendarArea .noti {
+	overflow: hidden;
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	min-height: 26px;
+	margin-top: 20px;
+	padding: 5px;
+	text-align: left;
+	background-color: #1e3e56;
+	box-sizing: border-box;
+}
+
+.calendarArea .noti.middleItem {
+	margin-right: -6px;
+	margin-left: -6px;
+}
+
+.calendarArea .noti.startItem {
+	margin-right: -6px;
+}
+
+.calendarArea .noti.finishItem {
+	margin-left: -6px;
+}
+
+.calendarArea .noti + .noti {
+	margin-top: 5px;
+}
+
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup[aria-hidden="true"] {
+	display: none;
+}
+
+.popup .layer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	border: 1px solid #5b595b;
+	border-radius: 8px;
+	background-color: #2e2b2f;
+	box-sizing: border-box;
+	transform: translate(-50%, -50%);
+}
+
+.popup .infoWrap {
+	padding: 20px;
+}
+
+.popup .infoWrap input {
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	border: none;
+	background-color: inherit;
+	vertical-align: top;
+	outline: none;
+}
+
+.popup .infoWrap .scheduleDate {
+	display: block;
+	font-size: 14px;
+}
+
+.popup .infoWrap.layerBtnArea {
+	display: flex;
+	align-items: center;
+	padding: 0;
+}
+
+.popup .infoWrap.layerBtnArea .btn {
+	flex: 1;
+	line-height: 50px;
+	text-align: center;
+}
+
+.popup .infoWrap + .infoWrap {
+	border-top: 1px solid #514f52;
 }
 
 @media all and (max-width: 374px) {

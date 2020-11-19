@@ -10,10 +10,10 @@
         <div class="wrap">
             <div class="dateArea">
                 <h1 class="dateText">0000년 00월</h1>
-                <div class="btnArea">
-                    <a href="#" class="btn" onClick="setPrevCalendar(event)" role="button"><span class="blind">이전달</span>&lt;</a>
-                    <a href="#" class="btn" onClick="setTodayCalendar(event)" role="button">오늘</a>
-                    <a href="#" class="btn" onClick="setNextCalendar(event)" role="button"><span class="blind">다음달</span>&gt;</a>
+                <div class="btnMonthArea">
+                    <a href="#" class="btnMonth" onClick="setPrevCalendar(event)" role="button"><span class="blind">이전달</span>&lt;</a>
+                    <a href="#" class="btnMonth" onClick="setTodayCalendar(event)" role="button">오늘</a>
+                    <a href="#" class="btnMonth" onClick="setNextCalendar(event)" role="button"><span class="blind">다음달</span>&gt;</a>
                 </div>
             </div>
 
@@ -38,6 +38,21 @@
                         <span class="calendarCell">6일</span>
                         <span class="calendarCell">7일</span>
                     </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" aria-hidden="true">
+            <div class="layer">
+                <div class="infoWrap">
+                    <input type="text" placeholder="새로운 이벤트">
+                </div>
+                <div class="infoWrap">
+                    <span class="scheduleDate">0000. 00. 00 ~ 0000. 00. 00</span>
+                </div>
+                <div class="infoWrap layerBtnArea">
+                    <a href="#" class="btn btnCancel" role="button">취소</a>
+                    <a href="#" class="btn btnConfirm" role="button">확인</a>
                 </div>
             </div>
         </div>

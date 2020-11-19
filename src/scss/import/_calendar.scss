@@ -22,17 +22,17 @@ body {
     }
 }
 
-.btnArea {
+.btnMonthArea {
     display: flex;
     align-items: center;
 
-    .btn {
+    .btnMonth {
         flex: none;
         padding: 5px 10px;
         border-radius: 5px;
         background-color: #545556;
 
-        & + .btn {
+        & + .btnMonth {
             margin-left: 3px;
         }
     }
@@ -79,6 +79,7 @@ body {
     .calendarCell {
         flex: 1;
         padding: 5px;
+        user-select: none;
 
         &.holiday {
             color: #bd3537;
@@ -86,6 +87,97 @@ body {
 
         &.saturday {
             color: #64aef1;
+        }
+    }
+
+    .noti {
+        @include ellipsis;
+
+        min-height: 26px;
+        margin-top: 20px;
+        padding: 5px;
+        text-align: left;
+        background-color: #1e3e56;
+        box-sizing: border-box;
+
+        &.middleItem {
+            margin-right: -6px;
+            margin-left: -6px;
+        }
+
+        &.startItem {
+            margin-right: -6px;
+        }
+
+        &.finishItem {
+            margin-left: -6px;
+        }
+
+        & + .noti {
+            margin-top: 5px;
+        }
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    &[aria-hidden="true"] {
+        display: none;
+    }
+
+    .layer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        border: 1px solid #5b595b;
+        border-radius: 8px;
+        background-color: #2e2b2f;
+        box-sizing: border-box;
+        transform: translate(-50%, -50%);
+    }
+
+    .infoWrap {
+        padding: 20px;
+
+        input {
+            display: inline-block;
+            width: 100%;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            background-color: inherit;
+            vertical-align: top;
+            outline: none;
+        }
+
+        .scheduleDate {
+            display: block;
+            font-size: 14px;
+        }
+
+        &.layerBtnArea {
+            display: flex;
+            align-items: center;
+            padding: 0;
+
+            .btn {
+                flex: 1;
+                line-height: 50px;
+                text-align: center;
+            }
+        }
+
+        & + .infoWrap {
+            border-top: 1px solid #514f52;
         }
     }
 }
