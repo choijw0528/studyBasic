@@ -64,13 +64,56 @@ $NEW_FONT_PATH: '../font/newFont/';
     }
 }
 
+.infoArea {
+    display: inline-block;
+    vertical-align: top;
+
+    & + .infoArea {
+        margin-left: 50px;
+        padding-left: 50px;
+        border-left: 1px solid #000;
+    }
+
+    &.newStyle {
+        .btnTest {
+            display: inline-block;
+            height: 30px;
+            padding: 0 10px;
+            line-height: 28px;
+            vertical-align: top;
+
+            &:before {
+                margin-top: 8px;
+                vertical-align: top;
+            }
+        }
+
+        .box {
+            padding: 0;
+
+            .boxInner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+            .number {
+                height: auto;
+                padding: 0;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
 .infoWrap {
     margin-top: 10px;
 }
 
 .btnTest {
     padding: 5px 10px;
-    border: solid 1px #8156fb;
+    border: 1px solid #8156fb;
     border-radius: 3px;
     background-color: #efe9ff;
     color: #8156fb;
@@ -86,7 +129,6 @@ $NEW_FONT_PATH: '../font/newFont/';
 }
 
 .box {
-    position: relative;
     display: inline-block;
     width: 350px;
     height: 75px;
@@ -102,7 +144,6 @@ $NEW_FONT_PATH: '../font/newFont/';
         height: 24px;
         margin-right: 10px;
         padding: 4px;
-        font-family: 'NotoSansKr_Bold';
         font-size: 14px;
         color: #4254ff;
         border-radius: 15px;
