@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+$PREV_FONT_PATH: '../font/prevFont/';
+$NEW_FONT_PATH: '../font/newFont/';
+
+/*  NotoSans  */
+@font-face {
+    font-family: 'NotoSanskr_Prev';
+    font-style: normal;
+    font-weight: 400;
+    src: url($PREV_FONT_PATH + 'NotoSanskr_Regular.woff2') format('woff2'),
+    url($PREV_FONT_PATH + 'NotoSanskr_Regular.eot'),
+    url($PREV_FONT_PATH + 'NotoSanskr_Regular.woff') format('woff'),
+    // url($PREV_FONT_PATH + 'NotoSanskr_Regular.ttf') format('truetype');
+}
+
+/* noto-sans-kr-regular - latin_korean */
+@font-face {
+    font-family: 'NotoSanskr_New';
+    font-style: normal;
+    font-weight: 400;
+    src: url($NEW_FONT_PATH + 'noto-sans-kr-v13-latin_korean-regular.woff2') format('woff2'),
+    url($NEW_FONT_PATH + 'noto-sans-kr-v13-latin_korean-regular.eot'),
+    url($NEW_FONT_PATH + 'noto-sans-kr-v13-latin_korean-regular.woff') format('woff'),
+}
+
+* {
+    // font: inherit;
+    box-sizing: border-box;
+}
+
+.wrap {
+    padding: 30px;
+}
+
+.prevFontArea {
+    font-family: NotoSanskr_Prev, sans-serif;
+
+    .btnTest {
+        font-family: NotoSanskr_Prev, sans-serif;
+    }
+
+    .box {
+        .number,
+        .text {
+            font-family: NotoSanskr_Prev, sans-serif;
+        }
+    }
+}
+
+.newFontArea {
+    margin-top: 30px;
+    font-family: NotoSanskr_New, sans-serif;
+
+    .btnTest {
+        font-family: NotoSanskr_New, sans-serif;
+    }
+
+    .box {
+        .number,
+        .text {
+            font-family: NotoSanskr_New, sans-serif;
+        }
+    }
+}
+
+.infoWrap {
+    margin-top: 10px;
+}
+
+.btnTest {
+    padding: 5px 10px;
+    border: solid 1px #8156fb;
+    border-radius: 3px;
+    background-color: #efe9ff;
+    color: #8156fb;
+
+    &:before {
+        @include get-sprite('icon_test', $sp_font);
+
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+        content: '';
+    }
+}
+
+.box {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 75px;
+    padding: 25px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    background: #fafafa;
+    text-align: center;
+
+    .number {
+        display: inline-block;
+        width: 44px;
+        height: 24px;
+        margin-right: 10px;
+        padding: 4px;
+        font-family: 'NotoSansKr_Bold';
+        font-size: 14px;
+        color: #4254ff;
+        border-radius: 15px;
+        background: #d4d8fd;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}

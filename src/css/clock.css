@@ -134,10 +134,16 @@ body {
 }
 
 .digitalClockArea {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 .segmentArea {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -152,7 +158,9 @@ body {
 	left: -27px;
 	font-size: 50px;
 	font-weight: bold;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 	content: ':';
 }
 
@@ -165,7 +173,8 @@ body {
 .segmentWrap .segment {
 	width: 64px;
 	height: 12px;
-	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	        border-radius: 6px;
 }
 
 .segmentWrap .segment.pos1 {
@@ -176,15 +185,23 @@ body {
 .segmentWrap .segment.pos2 {
 	top: 4px;
 	left: 6px;
-	transform: rotate(90deg);
-	transform-origin: left;
+	-webkit-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	        transform: rotate(90deg);
+	-webkit-transform-origin: left;
+	    -ms-transform-origin: left;
+	        transform-origin: left;
 }
 
 .segmentWrap .segment.pos3 {
 	top: 4px;
 	right: 6px;
-	transform: rotate(-90deg);
-	transform-origin: right;
+	-webkit-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+	-webkit-transform-origin: right;
+	    -ms-transform-origin: right;
+	        transform-origin: right;
 }
 
 .segmentWrap .segment.pos4 {
@@ -195,15 +212,23 @@ body {
 .segmentWrap .segment.pos5 {
 	bottom: 4px;
 	left: 6px;
-	transform: rotate(-90deg);
-	transform-origin: left;
+	-webkit-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+	-webkit-transform-origin: left;
+	    -ms-transform-origin: left;
+	        transform-origin: left;
 }
 
 .segmentWrap .segment.pos6 {
 	bottom: 4px;
 	right: 6px;
-	transform: rotate(90deg);
-	transform-origin: right;
+	-webkit-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	        transform: rotate(90deg);
+	-webkit-transform-origin: right;
+	    -ms-transform-origin: right;
+	        transform-origin: right;
 }
 
 .segmentWrap .segment.pos7 {
@@ -305,9 +330,11 @@ body {
 	width: 290px;
 	height: 290px;
 	border: 5px solid #fff;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	background-image: url("../img/images/clock/clockFace.png");
-	background-size: cover;
+	-webkit-background-size: cover;
+	        background-size: cover;
 	background-color: #999;
 }
 
@@ -317,9 +344,12 @@ body {
 	left: 50%;
 	width: 20px;
 	height: 20px;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	background-color: #fff;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	content: '';
 }
 
@@ -329,9 +359,12 @@ body {
 	left: 50%;
 	width: 12px;
 	margin-left: -6px;
-	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	        border-radius: 6px;
 	background-color: #000;
-	transform-origin: bottom;
+	-webkit-transform-origin: bottom;
+	    -ms-transform-origin: bottom;
+	        transform-origin: bottom;
 }
 
 .clockStick.hourStick {
@@ -348,7 +381,8 @@ body {
 	width: 4px;
 	height: 100px;
 	margin: -100px 0 0 -2px;
-	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	        border-radius: 2px;
 	background-color: #f00;
 }
 
@@ -372,7 +406,8 @@ body {
 	.segmentWrap .segment {
 		width: 36px;
 		height: 8px;
-		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		        border-radius: 4px;
 	}
 	.segmentWrap .segment.pos1 {
 		top: 0;
@@ -381,14 +416,22 @@ body {
 	.segmentWrap .segment.pos2 {
 		top: 2px;
 		left: 4px;
-		transform: rotate(90deg);
-		transform-origin: left;
+		-webkit-transform: rotate(90deg);
+		    -ms-transform: rotate(90deg);
+		        transform: rotate(90deg);
+		-webkit-transform-origin: left;
+		    -ms-transform-origin: left;
+		        transform-origin: left;
 	}
 	.segmentWrap .segment.pos3 {
 		top: 2px;
 		right: 4px;
-		transform: rotate(-90deg);
-		transform-origin: right;
+		-webkit-transform: rotate(-90deg);
+		    -ms-transform: rotate(-90deg);
+		        transform: rotate(-90deg);
+		-webkit-transform-origin: right;
+		    -ms-transform-origin: right;
+		        transform-origin: right;
 	}
 	.segmentWrap .segment.pos4 {
 		top: 40px;
@@ -397,14 +440,22 @@ body {
 	.segmentWrap .segment.pos5 {
 		bottom: 2px;
 		left: 4px;
-		transform: rotate(-90deg);
-		transform-origin: left;
+		-webkit-transform: rotate(-90deg);
+		    -ms-transform: rotate(-90deg);
+		        transform: rotate(-90deg);
+		-webkit-transform-origin: left;
+		    -ms-transform-origin: left;
+		        transform-origin: left;
 	}
 	.segmentWrap .segment.pos6 {
 		bottom: 2px;
 		right: 4px;
-		transform: rotate(90deg);
-		transform-origin: right;
+		-webkit-transform: rotate(90deg);
+		    -ms-transform: rotate(90deg);
+		        transform: rotate(90deg);
+		-webkit-transform-origin: right;
+		    -ms-transform-origin: right;
+		        transform-origin: right;
 	}
 	.segmentWrap .segment.pos7 {
 		bottom: 0;
@@ -423,7 +474,8 @@ body {
 	.segmentWrap .segment {
 		width: 24px;
 		height: 8px;
-		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		        border-radius: 4px;
 	}
 	.segmentWrap .segment.pos1 {
 		top: 0;
@@ -432,14 +484,22 @@ body {
 	.segmentWrap .segment.pos2 {
 		top: 2px;
 		left: 4px;
-		transform: rotate(90deg);
-		transform-origin: left;
+		-webkit-transform: rotate(90deg);
+		    -ms-transform: rotate(90deg);
+		        transform: rotate(90deg);
+		-webkit-transform-origin: left;
+		    -ms-transform-origin: left;
+		        transform-origin: left;
 	}
 	.segmentWrap .segment.pos3 {
 		top: 2px;
 		right: 4px;
-		transform: rotate(-90deg);
-		transform-origin: right;
+		-webkit-transform: rotate(-90deg);
+		    -ms-transform: rotate(-90deg);
+		        transform: rotate(-90deg);
+		-webkit-transform-origin: right;
+		    -ms-transform-origin: right;
+		        transform-origin: right;
 	}
 	.segmentWrap .segment.pos4 {
 		top: 28px;
@@ -448,19 +508,25 @@ body {
 	.segmentWrap .segment.pos5 {
 		bottom: 2px;
 		left: 4px;
-		transform: rotate(-90deg);
-		transform-origin: left;
+		-webkit-transform: rotate(-90deg);
+		    -ms-transform: rotate(-90deg);
+		        transform: rotate(-90deg);
+		-webkit-transform-origin: left;
+		    -ms-transform-origin: left;
+		        transform-origin: left;
 	}
 	.segmentWrap .segment.pos6 {
 		bottom: 2px;
 		right: 4px;
-		transform: rotate(90deg);
-		transform-origin: right;
+		-webkit-transform: rotate(90deg);
+		    -ms-transform: rotate(90deg);
+		        transform: rotate(90deg);
+		-webkit-transform-origin: right;
+		    -ms-transform-origin: right;
+		        transform-origin: right;
 	}
 	.segmentWrap .segment.pos7 {
 		bottom: 0;
 		left: 6px;
 	}
 }
-
-/*# sourceMappingURL=clock.css.map */

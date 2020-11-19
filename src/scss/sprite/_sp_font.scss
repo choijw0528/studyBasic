@@ -1,0 +1,16 @@
+// Sprites Map
+$sp_font: (
+	name: 'sp_font',
+	ratio: 1,
+	width: 13px,
+	height: 13px,
+	image: '../img/sprite/sp_font.png',
+	sprites: (
+	icon_test: (
+			offset-x: 0px,
+			offset-y: 0px,
+			width: 13px,
+			height: 13px,
+		),
+	)
+);

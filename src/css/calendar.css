@@ -119,15 +119,31 @@ body {
 }
 
 .wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	height: 100%;
 }
 
 .dateArea {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 20px;
 }
 
@@ -136,14 +152,24 @@ body {
 }
 
 .btnMonthArea {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .btnMonthArea .btnMonth {
-	flex: none;
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	    -ms-flex: none;
+	        flex: none;
 	padding: 5px 10px;
-	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
 	background-color: #545556;
 }
 
@@ -152,15 +178,31 @@ body {
 }
 
 .calendarArea {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	flex: 1;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 	text-align: right;
 }
 
 .calendarArea .calendarTitleRow {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .calendarArea .calendarTitleRow .calendarCell {
@@ -168,9 +210,19 @@ body {
 }
 
 .calendarArea .calendarDateArea {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	flex: 1;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 
 .calendarArea .calendarDateArea .calendarCell.holiday, .calendarArea .calendarDateArea .calendarCell.saturday {
@@ -178,8 +230,14 @@ body {
 }
 
 .calendarArea .calendarRow {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex: 1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 	border-top: 1px solid #383838;
 }
 
@@ -188,9 +246,15 @@ body {
 }
 
 .calendarArea .calendarCell {
-	flex: 1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 	padding: 5px;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 .calendarArea .calendarCell.holiday {
@@ -211,7 +275,8 @@ body {
 	padding: 5px;
 	text-align: left;
 	background-color: #1e3e56;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .calendarArea .noti.middleItem {
@@ -250,10 +315,14 @@ body {
 	left: 50%;
 	width: 300px;
 	border: 1px solid #5b595b;
-	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
 	background-color: #2e2b2f;
-	box-sizing: border-box;
-	transform: translate(-50%, -50%);
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 }
 
 .popup .infoWrap {
@@ -279,13 +348,22 @@ body {
 }
 
 .popup .infoWrap.layerBtnArea {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 0;
 }
 
 .popup .infoWrap.layerBtnArea .btn {
-	flex: 1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 	line-height: 50px;
 	text-align: center;
 }
@@ -299,5 +377,3 @@ body {
 		font-size: 25px;
 	}
 }
-
-/*# sourceMappingURL=calendar.css.map */
