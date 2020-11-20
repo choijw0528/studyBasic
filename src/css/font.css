@@ -113,7 +113,7 @@ iframe {
 	height: 100%;
 }
 
-.btnTest:before {
+.infoArea.newStyle .btnTest:before {
 	background-image: url(../img/sprite/sp_font.png);
 	-webkit-background-size: 13px 13px;
 	        background-size: 13px 13px;
@@ -192,8 +192,14 @@ iframe {
 }
 
 .infoArea.newStyle .btnTest:before {
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	width: 13px;
+	height: 13px;
+	display: inline-block;
 	margin-top: 8px;
 	vertical-align: top;
+	content: '';
 }
 
 .infoArea.newStyle .box {
@@ -236,14 +242,9 @@ iframe {
 }
 
 .btnTest:before {
-	background-position: 0px 0px;
-	background-repeat: no-repeat;
-	width: 13px;
-	height: 13px;
-	display: inline-block;
 	margin-right: 5px;
 	vertical-align: middle;
-	content: '';
+	content: url(../sprite_piece/font/icon_test.png);
 }
 
 .box {

@@ -25,7 +25,6 @@ $NEW_FONT_PATH: '../font/newFont/';
 }
 
 * {
-    // font: inherit;
     box-sizing: border-box;
 }
 
@@ -83,8 +82,12 @@ $NEW_FONT_PATH: '../font/newFont/';
             vertical-align: top;
 
             &:before {
+                @include get-sprite('icon_test', $sp_font);
+                
+                display: inline-block;
                 margin-top: 8px;
                 vertical-align: top;
+                content: '';
             }
         }
 
@@ -119,12 +122,9 @@ $NEW_FONT_PATH: '../font/newFont/';
     color: #8156fb;
 
     &:before {
-        @include get-sprite('icon_test', $sp_font);
-
-        display: inline-block;
         margin-right: 5px;
         vertical-align: middle;
-        content: '';
+        content: url(../sprite_piece/font/icon_test.png);
     }
 }
 
