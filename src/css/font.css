@@ -128,6 +128,18 @@ iframe {
 	src: url("../font/prevFont/NotoSanskr_Regular.woff2") format("woff2"), url("../font/prevFont/NotoSanskr_Regular.eot"), url("../font/prevFont/NotoSanskr_Regular.woff") format("woff");
 }
 
+@font-face {
+	font-family: 'NotoSanskr_Prev_Demilight';
+	font-style: normal;
+	src: url("../font/prevFont/NotoSanskr_Demilight.woff2") format("woff2"), url("../font/prevFont/NotoSanskr_Demilight.eot"), url("../font/prevFont/NotoSanskr_Demilight.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'NotoSanskr_Prev_light';
+	font-style: normal;
+	src: url("../font/prevFont/NotoSanskr_Light.woff2") format("woff2"), url("../font/prevFont/NotoSanskr_Light.eot"), url("../font/prevFont/NotoSanskr_Light.woff") format("woff");
+}
+
 /* noto-sans-kr-regular - latin_korean */
 @font-face {
 	font-family: 'NotoSanskr_New';
@@ -282,4 +294,35 @@ iframe {
 
 .windowArea img {
 	margin-left: -18px;
+}
+
+.fontTestArea {
+	margin-top: 50px;
+}
+
+.fontTestArea .fontTestWrap {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.fontTestArea .fontTestWrap + .fontTestWrap {
+	margin-left: 30px;
+	padding-left: 30px;
+	border-left: 1px solid #ccc;
+}
+
+.fontTestArea h3 {
+	margin-top: 10px;
+}
+
+.fontTestArea h3.light {
+	font-family: NotoSanskr_Prev_light, sans-serif;
+}
+
+.fontTestArea h3.demilight {
+	font-family: NotoSanskr_Prev_Demilight, sans-serif;
+}
+
+.fontTestArea h3.regular {
+	font-family: NotoSanskr_Prev, sans-serif;
 }

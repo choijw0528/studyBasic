@@ -14,6 +14,25 @@ $NEW_FONT_PATH: '../font/newFont/';
     // url($PREV_FONT_PATH + 'NotoSanskr_Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'NotoSanskr_Prev_Demilight';
+    font-style: normal;
+    // font-weight: 300;
+    src: url($PREV_FONT_PATH + 'NotoSanskr_Demilight.woff2') format('woff2'),
+    url($PREV_FONT_PATH + 'NotoSanskr_Demilight.eot'),
+    url($PREV_FONT_PATH + 'NotoSanskr_Demilight.woff') format('woff'),
+    // url($PREV_FONT_PATH + 'NotoSanskr_Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NotoSanskr_Prev_light';
+    font-style: normal;
+    // font-weight: 300;
+    src: url($PREV_FONT_PATH + 'NotoSanskr_Light.woff2') format('woff2'),
+    url($PREV_FONT_PATH + 'NotoSanskr_Light.eot'),
+    url($PREV_FONT_PATH + 'NotoSanskr_Light.woff') format('woff'),
+    // url($PREV_FONT_PATH + 'NotoSanskr_Regular.ttf') format('truetype');
+}
+
 /* noto-sans-kr-regular - latin_korean */
 @font-face {
     font-family: 'NotoSanskr_New';
@@ -160,5 +179,37 @@ $NEW_FONT_PATH: '../font/newFont/';
 
     img {
         margin-left: -18px;
+    }
+}
+
+.fontTestArea {
+    margin-top: 50px;
+
+    .fontTestWrap {
+        display: inline-block;
+        vertical-align: top;
+
+        & + .fontTestWrap {
+            margin-left: 30px;
+            padding-left: 30px;
+            border-left: 1px solid #ccc;
+        }
+    }
+
+
+    h3 {
+        margin-top: 10px;
+
+        &.light {
+            font-family: NotoSanskr_Prev_light, sans-serif;
+        }
+
+        &.demilight {
+            font-family: NotoSanskr_Prev_Demilight, sans-serif;
+        }
+
+        &.regular {
+            font-family: NotoSanskr_Prev, sans-serif;
+        }
     }
 }
