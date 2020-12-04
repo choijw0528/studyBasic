@@ -63,6 +63,14 @@ input {
 	-webkit-border-radius: 0;
 }
 
+input[type=search]::-webkit-search-cancel-button {
+	-webkit-appearance: none !important;
+}
+
+input[type=search]::-ms-clear {
+	display: none;
+}
+
 dl,
 ol,
 ul {
@@ -89,14 +97,6 @@ button {
 textarea {
 	overflow: auto;
 	resize: none;
-}
-
-input[type=search]::-webkit-search-cancel-button {
-	-webkit-appearance: none !important;
-}
-
-input[type=search]::-ms-clear {
-	display: none;
 }
 
 .blind {

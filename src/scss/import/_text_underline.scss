@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+body {
+    color: #fff;
+    background-color: #242424;
+}
+
+.wrap {
+    padding: 50px;
+}
+
+.descList {
+    margin-top: 15px;
+
+    .listItem {
+        font-size: 20px;
+        line-height: 24px;
+
+        & + .listItem {
+            margin-top: 10px;
+        }
+
+        &.typeSecond {
+            text-indent: 30px;
+        }
+    }
+}
+
+.exampleArea {
+    margin-top: 30px;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    &.typeLong {
+        width: 200px;
+    }
+}
+
+.example {
+    background-image: linear-gradient(#fcc, #fcc);
+    background-position-y: bottom;
+    background-size: 0 0.1em;
+    background-repeat: no-repeat;
+    // background: linear-gradient(#fcc, #fcc) bottom / 0 3px no-repeat;
+    background: linear-gradient(#f00, #f00) bottom / 0 .1em no-repeat,
+    linear-gradient(#00f, #00f) bottom / 100% .1em no-repeat;
+    transition: 0.5s background-size;
+
+    &:hover {
+        background-size: 100% 0.1em;
+    }
+
+    &.typeLeft {
+        background-position: left bottom;
+    }
+
+    &.typeRight {
+        background-position: right bottom;
+    }
+}

@@ -1,0 +1,181 @@
+html,
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+table,
+th,
+td,
+button,
+form,
+input,
+select,
+textarea,
+fieldset,
+legend {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	-webkit-text-size-adjust: none;
+}
+
+body {
+	position: relative;
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	word-break: normal;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+address,
+em {
+	font-style: normal;
+}
+
+fieldset,
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+input {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+	-webkit-appearance: none !important;
+}
+
+input[type=search]::-ms-clear {
+	display: none;
+}
+
+dl,
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a[href]:hover, a[href]:active, a[href]:focus {
+	text-decoration: none;
+}
+
+button {
+	-webkit-appearance: none;
+	border: 0;
+	background: none;
+	outline: none;
+	cursor: pointer;
+}
+
+textarea {
+	overflow: auto;
+	resize: none;
+}
+
+.blind {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	clip: rect(0, 0, 0, 0);
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #fff;
+	background-color: #242424;
+}
+
+.wrap {
+	padding: 50px;
+}
+
+.descList {
+	margin-top: 15px;
+}
+
+.descList .listItem {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.descList .listItem + .listItem {
+	margin-top: 10px;
+}
+
+.descList .listItem.typeSecond {
+	text-indent: 30px;
+}
+
+.exampleArea {
+	margin-top: 30px;
+	font-size: 40px;
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+.exampleArea.typeLong {
+	width: 200px;
+}
+
+.example {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fcc), to(#fcc));
+	background-image: -webkit-linear-gradient(#fcc, #fcc);
+	background-image: linear-gradient(#fcc, #fcc);
+	background-position-y: bottom;
+	-webkit-background-size: 0 0.1em;
+	        background-size: 0 0.1em;
+	background-repeat: no-repeat;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#f00)) bottom/0 0.1em no-repeat, -webkit-gradient(linear, left top, left bottom, from(#00f), to(#00f)) bottom/100% 0.1em no-repeat;
+	background: -webkit-linear-gradient(#f00, #f00) bottom/0 0.1em no-repeat, -webkit-linear-gradient(#00f, #00f) bottom/100% 0.1em no-repeat;
+	background: linear-gradient(#f00, #f00) bottom/0 0.1em no-repeat, linear-gradient(#00f, #00f) bottom/100% 0.1em no-repeat;
+	-webkit-transition: 0.5s -webkit-background-size;
+	transition: 0.5s -webkit-background-size;
+	transition: 0.5s background-size;
+	transition: 0.5s background-size, 0.5s -webkit-background-size;
+}
+
+.example:hover {
+	-webkit-background-size: 100% 0.1em;
+	        background-size: 100% 0.1em;
+}
+
+.example.typeLeft {
+	background-position: left bottom;
+}
+
+.example.typeRight {
+	background-position: right bottom;
+}

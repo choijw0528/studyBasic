@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Underline</title>
+        <link rel="stylesheet" href="../css/text_underline.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="descArea">
+                <h1 class="title">Text Underline에 대한 설명</h1>
+                <ul class="descList">
+                    <li class="listItem">1. linear-gradient 속성을 이용해서 밑줄을 긋는다.</li>
+                    <li class="listItem">2. 내부 a.example이 inline인 경우 줄바꿈(br 가능) 되고도 밑줄을 긋는다.(4, 5번째)</li>
+                    <li class="listItem">3. 텍스트 영역에 hover해서 밑줄 확인 가능하다.</li>
+                    <li class="listItem">4. 밑줄의 위치를 조절할 수 있는지 확인이 필요하다.</li>
+                    <li class="listItem typeSecond">4-1. 이 부분이 해결되어야 활용도가 높다.</li>
+                    <li class="listItem typeSecond">4-2. 텍스트 영역의 크기가 커져야 될 것 같다.(예상)</li>
+                </ul>
+            </div>
+
+            <div class="exampleArea">
+                <a href="#" class="example typeLeft">From Left</a>
+            </div>
+
+            <div class="exampleArea">
+                <a href="#" class="example typeCenter">From Center</a>
+            </div>
+
+            <div class="exampleArea">
+                <a href="#" class="example typeRight">From Right</a>
+            </div>
+
+            <div class="exampleArea typeLong">
+                <a href="#" class="example typeLeft">긴 글에 대한 테스트 진행(From Left)</a>
+            </div>
+
+            <div class="exampleArea">
+                <a href="#" class="example typeLeft">긴 글을<br>br을<br>이용해<br>줄바꿈을<br>해보자<br>(From Left)</a>
+            </div>
+        </div>
+    </body>
+</html>
